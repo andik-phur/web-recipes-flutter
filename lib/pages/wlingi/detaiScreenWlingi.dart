@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-import '/notif.dart';
-import '/drawerPge.dart';
-import '/models/masakan_uenakk.dart';
+import 'package:masak_masakan_uenak/notif.dart';
 
-class DetailScreen extends StatelessWidget {
+import '../../models/masakan_uenakk.dart';
+import '../../drawerPge.dart';
+
+class DetailScreenWlingi extends StatelessWidget {
   final LocalFood place;
-  DetailScreen({required this.place});
+  DetailScreenWlingi({required this.place});
+
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -77,7 +79,7 @@ class _DetailMobilePageState extends State<DetailMobilePage> {
                     height: 20,
                     child: FittedBox(
                       child: Text(
-                        widget.place.namaMasakanKDR,
+                        widget.place.namaMasakanWLG,
                         textAlign: TextAlign.start,
                         style: TextStyle(
                           fontSize: 30.0,
@@ -102,7 +104,7 @@ class _DetailMobilePageState extends State<DetailMobilePage> {
                       padding: const EdgeInsets.all(10),
                       child: ListView(
                         scrollDirection: Axis.horizontal,
-                        children: widget.place.imageMasakanKDR2.map((url) {
+                        children: widget.place.imageMasakanWLG2.map((url) {
                           return AnimatedPadding(
                             duration: Duration(seconds: 2),
                             padding: click
@@ -168,10 +170,12 @@ class _DetailMobilePageState extends State<DetailMobilePage> {
                         padding: const EdgeInsets.fromLTRB(30, 0, 0, 40),
                         child: Container(
                           child: Text(
-                            widget.place.bahanKDR,
+                            widget.place.bahanWLG,
                             textAlign: TextAlign.justify,
-                            style:
-                                TextStyle(fontSize: 16.0, color: Colors.black),
+                            style: TextStyle(
+                                fontSize: 16.0,
+                                fontFamily: 'Oxygen',
+                                color: Colors.black),
                           ),
                         ),
                       ),
@@ -179,10 +183,7 @@ class _DetailMobilePageState extends State<DetailMobilePage> {
                         child: FittedBox(
                           child: Text(
                             'Cara memasaknya sebagai berikut sis:',
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontFamily: 'Oxygen',
-                                fontSize: 24),
+                            style: TextStyle(color: Colors.black, fontSize: 24),
                           ),
                         ),
                       ),
@@ -190,7 +191,7 @@ class _DetailMobilePageState extends State<DetailMobilePage> {
                         padding: const EdgeInsets.fromLTRB(30, 0, 0, 40),
                         child: Container(
                           child: Text(
-                            widget.place.caraMasakKDR,
+                            widget.place.caraMasakWLG,
                             textAlign: TextAlign.justify,
                             style: TextStyle(
                                 fontSize: 16.0,
@@ -289,7 +290,7 @@ class _DetailWebPageState extends State<DetailWebPage> {
                   height: 20,
                   child: FittedBox(
                     child: Text(
-                      widget.place.namaMasakanKDR,
+                      widget.place.namaMasakanWLG,
                       textAlign: TextAlign.start,
                       style: TextStyle(
                         fontSize: 30.0,
@@ -323,7 +324,7 @@ class _DetailWebPageState extends State<DetailWebPage> {
                       child: ListView(
                         controller: _scrollController,
                         scrollDirection: Axis.horizontal,
-                        children: widget.place.imageMasakanKDR2.map((url) {
+                        children: widget.place.imageMasakanWLG2.map((url) {
                           return AnimatedPadding(
                             duration: Duration(seconds: 2),
                             padding: click
@@ -390,7 +391,7 @@ class _DetailWebPageState extends State<DetailWebPage> {
                       padding: const EdgeInsets.fromLTRB(30, 0, 0, 40),
                       child: Container(
                         child: Text(
-                          widget.place.bahanKDR,
+                          widget.place.bahanWLG,
                           textAlign: TextAlign.justify,
                           style: TextStyle(
                               fontSize: 16.0,
@@ -409,7 +410,7 @@ class _DetailWebPageState extends State<DetailWebPage> {
                       padding: const EdgeInsets.fromLTRB(30, 0, 0, 40),
                       child: Container(
                         child: Text(
-                          widget.place.caraMasakKDR,
+                          widget.place.caraMasakWLG,
                           textAlign: TextAlign.justify,
                           style: TextStyle(
                               fontSize: 16.0,

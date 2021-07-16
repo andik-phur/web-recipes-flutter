@@ -1,11 +1,8 @@
-
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import '../../drawerPge.dart';
-import '../../notif.dart';
+import '/drawerPge.dart';
+import '/notif.dart';
 import '/models/masakan_uenakk.dart';
-
-
 
 class DetailScreen extends StatelessWidget {
   final LocalFood place;
@@ -378,14 +375,12 @@ class _DetailWebPageState extends State<DetailWebPage> {
                   children: <Widget>[
                     Container(
                       child: FittedBox(
-
-                          child: Text(
-                            'Bahanya sebagai berikut:',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 22,
-                            ),
-
+                        child: Text(
+                          'Bahanya sebagai berikut:',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 22,
+                          ),
                         ),
                       ),
                     ),
@@ -403,11 +398,9 @@ class _DetailWebPageState extends State<DetailWebPage> {
                       ),
                     ),
                     Container(
-
-                        child: Text(
-                          'Cara memasaknya sebagai berikut sis:',
-                          style: TextStyle(color: Colors.black, fontSize: 22),
-
+                      child: Text(
+                        'Cara memasaknya sebagai berikut sis:',
+                        style: TextStyle(color: Colors.black, fontSize: 22),
                       ),
                     ),
                     Padding(
